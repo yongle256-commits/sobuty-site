@@ -5,8 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
   <title>SoButy+ 在线编辑后台</title>
+  <style>
+    :root { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color:#2c2422; background:#fff8f5; }
+    * { box-sizing:border-box; }
+    body { min-height:100vh; margin:0; display:grid; place-items:center; padding:24px; background:radial-gradient(circle at top,#fff 0,#fff8f5 55%,#f8e8e2 100%); }
+    main { width:min(640px,100%); background:#fff; border:1px solid #eddad3; border-radius:28px; padding:42px; box-shadow:0 24px 80px rgba(100,55,42,.14); }
+    .eyebrow { color:#c56877; font-size:12px; font-weight:800; letter-spacing:.14em; }
+    h1 { margin:10px 0 12px; font:500 34px/1.2 Georgia,serif; }
+    p { color:#6d5a54; line-height:1.75; }
+    .actions { display:grid; gap:12px; margin:28px 0; }
+    a { display:block; padding:15px 20px; border-radius:999px; text-align:center; text-decoration:none; font-weight:700; }
+    .primary { color:#fff; background:#c56877; }
+    .secondary { color:#8b4f58; border:1px solid #dcaab1; }
+    ol { padding-left:22px; color:#6d5a54; line-height:1.8; }
+    code { background:#fff1ee; padding:2px 6px; border-radius:6px; }
+    @media(max-width:520px){ main{padding:28px 22px} h1{font-size:28px} }
+  </style>
 </head>
 <body>
-  <script src="https://unpkg.com/decap-cms@3.11.0/dist/decap-cms.js"></script>
+  <main>
+    <div class="eyebrow">SOBUTY+ ADMIN</div>
+    <h1>在线编辑网站</h1>
+    <p>点击下面的按钮，在 GitHub 中修改客服链接、社交媒体、会员链接和 FAQ。保存后网站会自动重新发布。</p>
+    <div class="actions">
+      <a class="primary" href="https://github.com/yongle256-commits/sobuty-site/edit/main/content/settings.json">编辑链接与 FAQ</a>
+      <a class="secondary" href="https://github.com/yongle256-commits/sobuty-site">查看网站文件</a>
+      <a class="secondary" href="../">返回网站</a>
+    </div>
+    <ol>
+      <li>修改引号中的网址或文字。</li>
+      <li>不要删除逗号、引号或大括号。</li>
+      <li>点击页面右上角的 <code>Commit changes</code> 保存。</li>
+      <li>等待约 1–2 分钟，网站自动更新。</li>
+    </ol>
+  </main>
 </body>
 </html>
