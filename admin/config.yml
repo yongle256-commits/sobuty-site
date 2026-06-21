@@ -1,0 +1,34 @@
+backend:
+  name: github
+  repo: yongle256-commits/sobuty-site
+  branch: main
+  use_graphql: true
+
+site_url: https://melodious-muffin-160b05.netlify.app
+display_url: https://melodious-muffin-160b05.netlify.app
+logo_url: https://melodious-muffin-160b05.netlify.app/assets/sobuty-lash-guide.png
+
+media_folder: assets/uploads
+public_folder: /assets/uploads
+
+collections:
+  - name: website
+    label: 网站设置
+    files:
+      - name: settings
+        label: 链接与 FAQ
+        file: content/settings.json
+        format: json
+        fields:
+          - { label: "WhatsApp 客服链接", name: whatsapp, widget: string, required: false, hint: "例如 https://wa.me/6281234567890" }
+          - { label: "Instagram 链接", name: instagram, widget: string, required: false }
+          - { label: "Facebook 链接", name: facebook, widget: string, required: false }
+          - { label: "会员加入链接", name: membership, widget: string, required: false }
+          - label: "常见问题"
+            name: faqs
+            widget: list
+            min: 3
+            max: 3
+            fields:
+              - { label: "问题", name: question, widget: string }
+              - { label: "答案", name: answer, widget: text }

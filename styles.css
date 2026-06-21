@@ -1,0 +1,21 @@
+:root { color-scheme: light; --rose:#c96978; --ink:#2d2927; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; background:#fff; }
+body { margin:0; overflow-x:hidden; color:var(--ink); font-family:Arial, Helvetica, sans-serif; }
+.page { position:relative; width:100vw; max-width:none; margin:0; overflow:hidden; }
+.design { display:block; width:100vw; max-width:none; height:auto; user-select:none; }
+.hotspot { position:absolute; left:calc(var(--x) * 1%); top:calc(var(--y) * 1%); width:calc(var(--w) * 1%); height:calc(var(--h) * 1%); border:0; padding:0; cursor:pointer; background:transparent; border-radius:12px; }
+.hotspot:hover { background:rgb(201 105 120 / 10%); outline:2px solid rgb(201 105 120 / 40%); }
+.hotspot:focus-visible { outline:3px solid var(--rose); background:rgb(255 255 255 / 30%); }
+.anchor { position:absolute; top:var(--top); left:0; width:1px; height:1px; pointer-events:none; }
+dialog { width:min(520px, calc(100% - 32px)); border:1px solid #ead8d1; border-radius:24px; padding:34px; box-shadow:0 24px 80px rgb(78 43 31 / 25%); color:var(--ink); background:#fffaf7; }
+dialog::backdrop { background:rgb(37 25 20 / 35%); backdrop-filter:blur(4px); }
+dialog h2 { margin:4px 32px 12px 0; font:500 27px/1.25 Georgia, serif; }
+dialog p { line-height:1.65; }
+.eyebrow { color:var(--rose); font-weight:700; letter-spacing:.12em; font-size:12px; }
+.close { position:absolute; right:20px; top:16px; border:0; background:none; font-size:30px; cursor:pointer; color:#75564e; }
+.primary { border:0; border-radius:999px; padding:12px 22px; background:var(--rose); color:white; cursor:pointer; }
+#toast { position:fixed; left:50%; bottom:26px; transform:translate(-50%, 24px); opacity:0; transition:.25s; background:#372824; color:white; padding:12px 18px; border-radius:999px; z-index:10; pointer-events:none; text-align:center; max-width:calc(100% - 32px); }
+#toast.show { opacity:1; transform:translate(-50%, 0); }
+@media (max-width:640px) { dialog { padding:28px 24px; } }
+@media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } #toast { transition:none; } }
